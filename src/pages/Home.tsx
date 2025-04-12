@@ -90,9 +90,9 @@ const Home: React.FC = () => {
         <div className="section-divider">
           <h2>Upcoming Events</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div className="flex justify-center mb-8">
           <div 
-            className="card group cursor-pointer"
+            className="card group cursor-pointer max-w-2xl"
             onClick={() => navigate('/events')}
           >
             <div className="mb-4 overflow-hidden rounded-lg">
