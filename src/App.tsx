@@ -3,7 +3,7 @@
  * Implements dark mode functionality and page-specific styling.
  */
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Moon, Sun } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
