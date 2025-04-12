@@ -7,6 +7,7 @@ import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-d
 import { Moon, Sun } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import GoToTop from './components/GoToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Events from './pages/Events';
@@ -77,6 +78,7 @@ function App() {
           </main>
 
           <Footer />
+          <GoToTop />
         </div>
       </PageWrapper>
     </Router>

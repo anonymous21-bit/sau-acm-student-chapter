@@ -4,7 +4,7 @@
  */
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Code, Menu, X } from 'lucide-react';
+import { Code, Menu, X, UserPlus } from 'lucide-react';
 
 interface NavbarProps {
   children?: React.ReactNode;
@@ -28,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
 
   return (
     <nav className="sticky top-0 bg-[var(--background)] border-b-2 border-[var(--secondary)] z-50 backdrop-blur-sm bg-opacity-90">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[95rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo and brand */}
           <Link to="/" className="flex items-center group">
@@ -36,22 +36,8 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
             <span className="ml-2 font-bold text-lg">SAU ACM</span>
           </Link>
 
-          <div className="flex items-center gap-2">
-            {/* Dark mode toggle - now visible on mobile */}
-            {children}
-            
-            {/* Mobile menu button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-xl hover:bg-[var(--secondary)] transition-colors"
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
-
           {/* Desktop navigation */}
-          <div className="hidden md:flex items-center space-x-6 ml-auto">
+          <div className="hidden xl:flex items-center space-x-8">
             {navLinks.map(({ path, label }) => (
               <Link
                 key={path}
@@ -64,12 +50,38 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
               </Link>
             ))}
           </div>
+
+          <div className="flex items-center gap-2">
+            {/* Become Member button - visible on both desktop and mobile */}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfkesEgOp2PJ0hi42W1a9mU9JJkzsdze0yf9oB5SRD8bZ-gow/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 px-3 py-1.5 sm:px-4 sm:py-2 xl:px-5 xl:py-2.5 rounded-xl font-medium text-[var(--accent)] border-2 border-[var(--accent)] hover:bg-[var(--accent)] hover:text-[var(--background)] transition-all duration-300 ease-in-out text-sm sm:text-base"
+            >
+              <UserPlus className="h-3.5 w-3.5 sm:h-4 sm:w-4 xl:h-5 xl:w-5" />
+              <span className="hidden sm:inline">become member</span>
+              <span className="sm:hidden">Join</span>
+            </a>
+            
+            {/* Dark mode toggle - now visible on mobile */}
+            {children}
+            
+            {/* Mobile menu button */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="xl:hidden p-2 rounded-xl hover:bg-[var(--secondary)] transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Mobile navigation menu */}
       <div 
-        className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}
+        className={`xl:hidden ${isMenuOpen ? 'block' : 'hidden'} absolute right-0 w-64 bg-[var(--background)] border-l-2 border-b-2 border-[var(--secondary)] rounded-bl-xl`}
         aria-hidden={!isMenuOpen}
       >
         <div className="px-2 pt-2 pb-3 space-y-1">
@@ -77,7 +89,7 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
             <Link
               key={path}
               to={path}
-              className={`block px-3 py-2 rounded-xl font-medium capitalize ${
+              className={`block px-3 py-2 rounded-xl font-medium capitalize text-right ${
                 location.pathname === path 
                   ? 'text-[var(--accent)] bg-[var(--secondary)]' 
                   : 'hover:bg-[var(--secondary)]'
