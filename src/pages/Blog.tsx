@@ -216,7 +216,7 @@ const Blog: React.FC = () => {
                 value={searchTerm}
                 onChange={handleSearchChange}
                 placeholder="Search posts..."
-                className="w-full px-4 py-2 rounded-lg border-2 border-[var(--accent)] bg-[var(--secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] pr-10"
+                className="w-full px-4 py-2 pl-10 rounded-lg border-2 border-[var(--accent)] bg-[var(--secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] pr-10"
               />
               {searchTerm && (
                 <button
@@ -230,6 +230,16 @@ const Blog: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => setSelectedTag(null)}
+                className={`px-3 py-1 rounded-lg text-sm transition-colors ${
+                  selectedTag === null
+                    ? 'bg-[var(--accent)] text-white'
+                    : 'bg-[var(--secondary)] hover:bg-[var(--accent)] hover:text-white'
+                }`}
+              >
+                ALL
+              </button>
               {allTags.map((tag) => (
                 <button
                   key={tag}
