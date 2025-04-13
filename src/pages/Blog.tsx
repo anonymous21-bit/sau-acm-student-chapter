@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ArrowRight, Clock, User } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, Clock, User, Search, X } from 'lucide-react';
 
 interface BlogPost {
   id: string;
@@ -51,11 +51,92 @@ Time management is crucial. Start with a minimum viable product (MVP) and add fe
     readTime: "4 min read",
     tags: ["Hackathon", "Programming", "Tips"],
     image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800"
+  },
+  {
+    id: "cloud-computing",
+    title: "The Future of Cloud Computing",
+    excerpt: "How cloud technologies are driving innovation and scalability in modern applications.",
+    content: `Cloud computing has become the backbone of modern technology infrastructure. In this article, we explore how advancements in cloud services are enabling businesses to scale rapidly and innovate efficiently.
+
+Key trends include serverless computing, which abstracts infrastructure management, and hybrid cloud solutions that combine on-premises and cloud environments for flexibility. Additionally, AI-driven cloud analytics are empowering organizations to derive actionable insights from massive datasets.
+
+As cloud adoption grows, security remains a priority, with new protocols ensuring data integrity and privacy across distributed systems.
+
+[Continue reading on Medium...]`,
+    author: "Priya Sharma",
+    date: "March 5, 2025",
+    readTime: "6 min read",
+    tags: ["Cloud", "Technology", "Innovation"],
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800"
+  },
+  {
+    id: "open-source",
+    title: "Why Open Source Matters",
+    excerpt: "A deep dive into the impact of open-source software on collaboration desf and innovation.",
+    content: `Open-source software has transformed the way developers collaborate and build technology. This article explores the principles behind open source, its benefits, and its challenges.
+
+Open source fosters community-driven development, enabling contributors worldwide to improve software collectively. It also democratizes access to cutting-edge tools, leveling the playing field for startups and individuals.
+
+However, maintaining open-source projects requires sustainable funding and governance models to ensure long-term success.
+
+[Continue reading on Medium...]`,
+    author: "Rahul Verma",
+    date: "February 28, 2025",
+    readTime: "5 min read",
+    tags: ["Open Source", "Programming", "Community"],
+    image: "https://images.unsplash.com/photo-1516321310767-0d7f9c7a9b67?auto=format&fit=crop&w=800"
   }
 ];
 
 const Blog: React.FC = () => {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>(posts);
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Get unique tags for filtering
+  const allTags = Array.from(new Set(posts.flatMap((post) => post.tags)));
+
+  // Filter posts based on search term and selected tag
+  useEffect(() => {
+    setIsLoading(true);
+    const timeout = setTimeout(() => {
+      let result = posts;
+
+      // Search filter
+      if (searchTerm) {
+        const lowerSearch = searchTerm.toLowerCase();
+        result = result.filter(
+          (post) =>
+            post.title.toLowerCase().includes(lowerSearch) ||
+            post.excerpt.toLowerCase().includes(lowerSearch)
+        );
+      }
+
+      // Tag filter
+      if (selectedTag) {
+        result = result.filter((post) => post.tags.includes(selectedTag));
+      }
+
+      setFilteredPosts(result);
+      setIsLoading(false);
+    }, 500); // Debounce for smoother UX
+
+    return () => clearTimeout(timeout);
+  }, [searchTerm, selectedTag]);
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const clearSearch = () => {
+    setSearchTerm('');
+  };
+
+  const handleTagClick = (tag: string) => {
+    setSelectedTag(selectedTag === tag ? null : tag);
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -103,7 +184,11 @@ const Blog: React.FC = () => {
                 {selectedPost.tags.map((tag, index) => (
                   <span 
                     key={index}
-                    className="px-3 py-1 rounded-lg bg-[var(--secondary)] text-sm"
+                    className="px-3 py-1 rounded-lg bg-[var(--secondary)] text-sm hover:bg-[var(--accent)] hover:text-white cursor-pointer transition-colors"
+                    onClick={() => {
+                      setSelectedPost(null);
+                      setSelectedTag(tag);
+                    }}
                   >
                     {tag}
                   </span>
@@ -122,36 +207,85 @@ const Blog: React.FC = () => {
           </article>
         </div>
       ) : (
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {posts.map((post) => (
-            <div
-              key={post.id}
-              className="card group cursor-pointer"
-              onClick={() => setSelectedPost(post)}
-            >
-              <div className="mb-4 rounded-xl overflow-hidden">
-                <img 
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="flex justify-between items-start mb-4">
-                <h2 className="text-xl font-bold group-hover:text-[var(--accent)] transition-colors">
-                  {post.title}
-                </h2>
-                <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-              </div>
-              <p className="mb-4">{post.excerpt}</p>
-              <div className="flex items-center justify-between text-sm">
-                <span>{post.author}</span>
-                <div className="flex items-center space-x-4">
-                  <span>{post.date}</span>
-                  <span>{post.readTime}</span>
-                </div>
-              </div>
+        <div className="space-y-8 max-w-5xl mx-auto">
+          {/* Search and Filter Section */}
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
+            <div className="relative w-full sm:w-1/2">
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={handleSearchChange}
+                placeholder="Search posts..."
+                className="w-full px-4 py-2 rounded-lg border-2 border-[var(--accent)] bg-[var(--secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)] pr-10"
+              />
+              {searchTerm && (
+                <button
+                  onClick={clearSearch}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--accent)] hover:text-[var(--accent-dark)]"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              )}
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--accent)]" />
             </div>
-          ))}
+
+            <div className="flex flex-wrap gap-2">
+              {allTags.map((tag) => (
+                <button
+                  key={tag}
+                  onClick={() => handleTagClick(tag)}
+                  className={`px-3 py-1 rounded-lg text-sm transition-colors ${
+                    selectedTag === tag
+                      ? 'bg-[var(--accent)] text-white'
+                      : 'bg-[var(--secondary)] hover:bg-[var(--accent)] hover:text-white'
+                  }`}
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Posts Grid */}
+          {isLoading ? (
+            <div className="flex justify-center items-center h-64">
+              <div className="animate-spin rounded-full h-12 w-12 border-4 border-[var(--accent)] border-t-transparent"></div>
+            </div>
+          ) : filteredPosts.length === 0 ? (
+            <p className="text-center text-lg">No posts found. Try adjusting your search or filters.</p>
+          ) : (
+            <div className="grid md:grid-cols-2 gap-8">
+              {filteredPosts.map((post) => (
+                <div
+                  key={post.id}
+                  className="card group cursor-pointer transform hover:scale-[1.02] transition-transform duration-200"
+                  onClick={() => setSelectedPost(post)}
+                >
+                  <div className="mb-4 rounded-xl overflow-hidden">
+                    <img 
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="flex justify-between items-start mb-4">
+                    <h2 className="text-xl font-bold group-hover:text-[var(--accent)] transition-colors">
+                      {post.title}
+                    </h2>
+                    <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+                  </div>
+                  <p className="mb-4 line-clamp-3">{post.excerpt}</p>
+                  <div className="flex items-center justify-between text-sm">
+                    <span>{post.author}</span>
+                    <div className="flex items-center space-x-4">
+                      <span>{post.date}</span>
+                      <span>{post.readTime}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
     </div>
