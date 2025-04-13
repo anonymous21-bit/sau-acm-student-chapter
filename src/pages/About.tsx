@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Laptop, Megaphone, Users, Palette, Globe, Database, Github, Linkedin, Instagram, Twitter, Facebook } from 'lucide-react';
+import { Code, Laptop, Megaphone, Users, Palette, Globe, Database, Github, Linkedin, Instagram, Twitter } from 'lucide-react';
 
 interface TeamMember {
   name: string;
