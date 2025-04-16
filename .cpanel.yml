@@ -2,5 +2,12 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/sauchapter/public_html/
+    - /bin/mkdir -p $DEPLOYPATH
+    # Clear the deployment directory to avoid conflicts
+    - /bin/rm -rf $DEPLOYPATH/*
+    # Copy all necessary files, excluding git-related files
     - /bin/cp -R public/* $DEPLOYPATH
-    - /bin/cp -R dist/* $DEPLOYPATH
+    # Only try to copy dist files if the directory exists
+    - if [ -d "dist" ]; then /bin/cp -R dist/* $DEPLOYPATH; fi
+    # Ensure proper permissions
+    - /bin/chmod -R 755 $DEPLOYPATH
