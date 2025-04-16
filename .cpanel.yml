@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sauchapter/public_html/
+    - /bin/cp -R public/* $DEPLOYPATH
+    - /bin/cp -R dist/* $DEPLOYPATH
