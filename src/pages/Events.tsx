@@ -24,8 +24,8 @@ interface EventDetails {
 
 // Sample event data
 const event: EventDetails = {
-  id: "research-workshop",
-  title: "Research Workshop & Coding Event",
+  id: "reindux-25",
+  title: "ReIndux'25",
   date: "April 25-26, 2025",
   time: "9:00 AM Onwards",
   location: "South Asian University, New Delhi",
@@ -148,7 +148,7 @@ const Events: React.FC = () => {
             <div className="space-y-8 mb-8">
               {/* Day 1 Schedule */}
               <div>
-                <h3 className="text-xl font-semibold mb-4">Day 1: Research Workshop</h3>
+                <h3 className="text-xl font-semibold mb-4">Day 1: ReIndux'25 - Research Workshop</h3>
                 <div className="space-y-4">
                   {event.dayOneSchedule?.map((item, index) => (
                     <div key={index} className="card">
@@ -170,7 +170,7 @@ const Events: React.FC = () => {
 
               {/* Day 2 Schedule */}
               <div>
-                <h3 className="text-xl font-semibold mb-4">Day 2: Coding Event</h3>
+                <h3 className="text-xl font-semibold mb-4">Day 2: ReIndux'25 - Coding Event</h3>
                 <div className="space-y-4">
                   {event.dayTwoSchedule?.map((item, index) => (
                     <div key={index} className="card">
