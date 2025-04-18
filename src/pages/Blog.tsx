@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Clock, User, Search, X } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 interface BlogPost {
   id: string;
@@ -72,7 +73,7 @@ As cloud adoption grows, security remains a priority, with new protocols ensurin
   {
     id: "open-source",
     title: "Why Open Source Matters",
-    excerpt: "A deep dive into the impact of open-source software on collaboration desf and innovation.",
+    excerpt: "A deep dive into the impact of open-source software on collaboration and innovation.",
     content: `Open-source software has transformed the way developers collaborate and build technology. This article explores the principles behind open source, its benefits, and its challenges.
 
 Open source fosters community-driven development, enabling contributors worldwide to improve software collectively. It also democratizes access to cutting-edge tools, leveling the playing field for startups and individuals.
@@ -84,11 +85,12 @@ However, maintaining open-source projects requires sustainable funding and gover
     date: "February 28, 2025",
     readTime: "5 min read",
     tags: ["Open Source", "Programming", "Community"],
-    image: "https://images.unsplash.com/photo-1516321310767-0d7f9c7a9b67?auto=format&fit=crop&w=800"
+    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=800"
   }
 ];
 
 const Blog: React.FC = () => {
+  const location = useLocation();
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
@@ -97,6 +99,17 @@ const Blog: React.FC = () => {
 
   // Get unique tags for filtering
   const allTags = Array.from(new Set(posts.flatMap((post) => post.tags)));
+
+  // Handle opening specific post from home page
+  useEffect(() => {
+    const { state } = location;
+    if (state && state.selectedPostTitle) {
+      const post = posts.find(p => p.title === state.selectedPostTitle);
+      if (post) {
+        setSelectedPost(post);
+      }
+    }
+  }, [location]);
 
   // Filter posts based on search term and selected tag
   useEffect(() => {

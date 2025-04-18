@@ -26,7 +26,7 @@ interface EventDetails {
 const event: EventDetails = {
   id: "reindux-25",
   title: "ReIndux'25",
-  date: "April 25-26, 2025",
+  date: "To be announced",
   time: "9:00 AM Onwards",
   location: "South Asian University, New Delhi",
   description: "A two-day comprehensive workshop exploring research careers and practical coding skills.",
@@ -54,6 +54,10 @@ const event: EventDetails = {
     }
   ],
   dayTwoSchedule: [
+    {
+      title: "Keynote Talk: How to get placed- A Career blueprint for Tech Students",
+      description: "Sayan Surya Raw, Senior Software Engineer, Microsoft - Insights on Career Development and Job Placement"
+    },
     {
       title: "Git & GitHub Workshop",
       description: "Hands-on session covering version control fundamentals, live demonstration, and practical exercises"

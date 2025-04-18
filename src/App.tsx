@@ -15,6 +15,7 @@ import Membership from './pages/Membership';
 import Resources from './pages/Resources';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
+import AnimatedBackground from './components/AnimatedBackground';
 
 /**
  * Wrapper component that handles page-specific styling by setting data attributes
@@ -53,6 +54,7 @@ function App() {
     <Router>
       <PageWrapper>
         <div className="min-h-screen flex flex-col">
+          <AnimatedBackground />
           <Navbar>
             {/* Theme toggle button */}
             <button

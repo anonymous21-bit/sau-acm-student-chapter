@@ -6,11 +6,11 @@ import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-interface ImageCarouselProps {
+interface CarouselGalleryProps {
   images: string[];
 }
 
-const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
+const CarouselGallery: React.FC<CarouselGalleryProps> = ({ images }) => {
   // Initialize Embla Carousel with loop enabled
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
@@ -61,4 +61,4 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
   );
 };
 
-export default ImageCarousel;
+export default CarouselGallery;
