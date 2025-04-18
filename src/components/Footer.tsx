@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Github, Linkedin, Mail, MapPin, Phone, Instagram } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Phone, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
@@ -37,8 +37,11 @@ const Footer: React.FC = () => {
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center group mb-4">
-              <Code className="h-8 w-8 text-[#1e6cff] transform group-hover:rotate-12 transition-transform" />
-              <span className="ml-2 font-bold text-lg">SAU ACM</span>
+              <img 
+                src={import.meta.env.BASE_URL + "sau-acm-logo.png"} 
+                alt="SAU ACM Student Chapter" 
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="text-sm text-gray-300 mb-6">
               The South Asian University ACM Student Chapter is dedicated to advancing computing 

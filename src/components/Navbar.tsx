@@ -4,7 +4,7 @@
  */
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Code, Menu, X, UserPlus } from 'lucide-react';
+import { Menu, X, UserPlus } from 'lucide-react';
 
 interface NavbarProps {
   children?: React.ReactNode;
@@ -32,8 +32,11 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
         <div className="flex justify-between h-16 items-center">
           {/* Logo and brand */}
           <Link to="/" className="flex items-center group">
-            <Code className="h-8 w-8 text-[var(--accent)] transform group-hover:rotate-12 transition-transform duration-200" />
-            <span className="ml-2 font-bold text-lg">SAU ACM</span>
+            <img 
+              src={import.meta.env.BASE_URL + "sau-acm-logo.png"} 
+              alt="SAU ACM Student Chapter" 
+              className="h-10 w-auto transform group-hover:scale-105 transition-transform duration-200"
+            />
           </Link>
 
           {/* Desktop navigation */}
