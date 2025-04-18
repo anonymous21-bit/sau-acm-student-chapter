@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://mukulsharma15.github.io/sau-acm-student-chapter/",
+  "homepage": "https://SAU-ACM-Student-Chapter.github.io/sau-acm-student-chapter/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
