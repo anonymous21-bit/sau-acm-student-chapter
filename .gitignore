@@ -85,7 +85,6 @@ out
 
 # Nuxt.js build output
 .nuxt
-dist
 
 # Nuxt.js static deployment output
 .output
@@ -105,7 +104,7 @@ dist
 *.ngurate*
 
 # Vite build output
-/dist
+
 # vite cache
 .vite
 
