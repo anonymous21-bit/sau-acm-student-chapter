@@ -6,11 +6,12 @@ import CarouselGallery from '../components/ImageCarousel';
 const Home: React.FC = () => {
   const navigate = useNavigate();
 
+  // Updated Upcoming Event Details
   const upcomingEvent = {
-    title: "ReIndux'25",
-    date: "To be announced",
-    description: "A two-day comprehensive workshop exploring research careers and practical coding skills.",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800"
+    title: "Git It Right! – A Hands-On Git & GitHub Workshop",
+    date: "April 26th, 2025 (Tentative)",
+    description: "This workshop is designed to introduce students to Git and GitHub—fundamental tools for version control and collaborative development. Join us for hands-on experience!",
+    image: "https://images.unsplash.com/photo-1617042375876-a13e36732a04?q=80&w=800&auto=format&fit=crop" // Updated image URL
   };
 
   const latestPosts = [
@@ -37,12 +38,12 @@ const Home: React.FC = () => {
     { icon: <Github className="h-6 w-6" />, url: 'https://github.com/SAU-ACM-Student-Chapter', label: 'GitHub' },
     { icon: <Linkedin className="h-6 w-6" />, url: 'https://in.linkedin.com/in/sau-acm-student-chapter-382812356', label: 'LinkedIn' },
     { icon: <Instagram className="h-6 w-6" />, url: 'https://www.instagram.com/sau_acmchapter/', label: 'Instagram' },
-    { 
+    {
       icon: <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="currentColor">
               <path d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239s23.409-59.241,52.844-59.241c29.665,0,53.306,26.82,52.843,59.241C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239s23.409-59.241,52.843-59.241c29.667,0,53.307,26.82,52.844,59.241C470.918,310.993,447.538,337.58,417.871,337.58Z"/>
-            </svg>, 
-      url: 'https://discord.gg/sau-acm', 
-      label: 'Discord' 
+            </svg>,
+      url: 'https://discord.gg/sau-acm',
+      label: 'Discord'
     },
   ];
 
@@ -68,8 +69,8 @@ const Home: React.FC = () => {
             and faculty through inspiring events, hands-on workshops, and exclusive access to resources
             like the ACM Digital Library.
           </p>
-          <Link 
-            to="/membership" 
+          <Link
+            to="/membership"
             className="btn-primary inline-flex items-center group mb-8"
           >
             Become a Member
@@ -97,13 +98,13 @@ const Home: React.FC = () => {
           <h2>Upcoming Events</h2>
         </div>
         <div className="flex justify-center mb-8">
-          <div 
+          <div
             className="card group cursor-pointer max-w-2xl"
             onClick={() => navigate('/events')}
           >
             <div className="mb-4 overflow-hidden rounded-lg">
-              <img 
-                src={upcomingEvent.image} 
+              <img
+                src={upcomingEvent.image}
                 alt={upcomingEvent.title}
                 className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
               />
@@ -121,8 +122,8 @@ const Home: React.FC = () => {
           </div>
         </div>
         <div className="text-center">
-          <Link 
-            to="/events" 
+          <Link
+            to="/events"
             className="btn-primary inline-flex items-center group"
           >
             View All Events
@@ -136,14 +137,14 @@ const Home: React.FC = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {latestPosts.map((post, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="card group cursor-pointer"
               onClick={() => navigate('/blog', { state: { selectedPostTitle: post.title } })}
             >
               <div className="mb-4 overflow-hidden rounded-lg">
-                <img 
-                  src={post.image} 
+                <img
+                  src={post.image}
                   alt={post.title}
                   className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
                 />
@@ -161,8 +162,8 @@ const Home: React.FC = () => {
           ))}
         </div>
         <div className="text-center">
-          <Link 
-            to="/blog" 
+          <Link
+            to="/blog"
             className="btn-primary inline-flex items-center group"
           >
             Read More Posts
@@ -191,7 +192,7 @@ const Home: React.FC = () => {
               </ul>
             </div>
           </div>
-          <Link 
+          <Link
             to="/membership"
             className="btn-primary inline-flex items-center group"
           >
