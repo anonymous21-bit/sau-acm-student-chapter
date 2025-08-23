@@ -8,7 +8,7 @@ const AnimatedBackground: React.FC = () => {
     const handleMouseMove = (e: MouseEvent) => {
       // Throttle to improve performance
       if (!handleMouseMove.throttleTimeout) {
-        handleMouseMove.throttleTimeout = setTimeout(() => {
+        handleMouseMove.throttleTimeout = window.setTimeout(() => {
           setMousePosition({ x: e.clientX, y: e.clientY });
           handleMouseMove.throttleTimeout = null;
         }, 30);
@@ -16,7 +16,7 @@ const AnimatedBackground: React.FC = () => {
     };
     
     // Define the throttle property for TypeScript
-    handleMouseMove.throttleTimeout = null as NodeJS.Timeout | null;
+    handleMouseMove.throttleTimeout = null as number | null;
     
     // Add event listener
     window.addEventListener('mousemove', handleMouseMove);
@@ -25,7 +25,7 @@ const AnimatedBackground: React.FC = () => {
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       if (handleMouseMove.throttleTimeout) {
-        clearTimeout(handleMouseMove.throttleTimeout);
+        window.clearTimeout(handleMouseMove.throttleTimeout);
       }
     };
   }, []);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Code, Laptop, Megaphone, Users, Palette, Globe, Github, Linkedin, Instagram, Twitter, BookOpen, BookText, PenTool } from 'lucide-react';
 
-import ReshmaMam from 'src/assets/images/Reshma_rastoogi.jpeg';
+import ReshmaMam from '../assets/images/Reshma_rastoogi.jpeg';
 
 
 interface TeamMember {
