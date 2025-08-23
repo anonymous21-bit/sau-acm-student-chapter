@@ -14,14 +14,14 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   // Teacher Coordinator
   {
-    name: "Prof. Reshma Rastogi",
+    name: "Dr. Reshma Rastogi",
     role: "Faculty Coordinator",
     subRole: "Advising and mentoring the team",
     icon: <BookText className="w-6 h-6 text-black" />,
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400",
     team: "teacher",
     socials: [
-      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/reshmarastogi' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://www.linkedin.com/in/dr-reshma-rastogi-nee-khemchandani-743716a/' },
       { icon: <Twitter className="h-5 w-5 text-black" />, url: 'https://twitter.com/reshmarastogi' }
     ]
   },
@@ -47,8 +47,8 @@ const teamMembers: TeamMember[] = [
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400",
     team: "coordinators",
     socials: [
-      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/mukul' },
-      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/mukul' }
+      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/mukulsharma15' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://www.linkedin.com/in/mukulsharma15' }
     ]
   },
   {
@@ -83,8 +83,8 @@ const teamMembers: TeamMember[] = [
     image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=400",
     team: "coordinators",
     socials: [
-      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/kundan' },
-      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/kundan' }
+      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/anonymous21-bit' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://www.linkedin.com/in/kundan21sharma' }
     ]
   },
   
@@ -97,8 +97,8 @@ const teamMembers: TeamMember[] = [
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400",
     team: "tech",
     socials: [
-      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/mukul' },
-      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/mukul' }
+      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/mukulsharma15' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://www.linkedin.com/in/mukulsharma15' }
     ]
   },
   {
@@ -109,8 +109,8 @@ const teamMembers: TeamMember[] = [
     image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=400",
     team: "tech",
     socials: [
-      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/kundan' },
-      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/kundan' }
+      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/anonymous21-bit' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://www.linkedin.com/in/kundan21sharma' }
     ]
   },
   {
@@ -185,8 +185,8 @@ const teamMembers: TeamMember[] = [
     image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=400",
     team: "socialMedia",
     socials: [
-      { icon: <Instagram className="h-5 w-5 text-black" />, url: 'https://instagram.com/misbah' },
-      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/misbah' }
+      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/misbahGitPilot44?tab=repositories' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'http://www.linkedin.com/in/misbah-ul-islam-0501b2323' }
     ]
   },
   {
