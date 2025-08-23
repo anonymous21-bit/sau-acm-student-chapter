@@ -1,6 +1,9 @@
 import React from 'react';
 import { Code, Laptop, Megaphone, Users, Palette, Globe, Github, Linkedin, Instagram, Twitter, BookOpen, BookText, PenTool } from 'lucide-react';
 
+import ReshmaMam from 'src/assets/images/Reshma_rastoogi.jpeg';
+
+
 interface TeamMember {
   name: string;
   role: string;
@@ -18,7 +21,7 @@ const teamMembers: TeamMember[] = [
     role: "Faculty Coordinator",
     subRole: "Advising and mentoring the team",
     icon: <BookText className="w-6 h-6 text-black" />,
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400",
+    image: ReshmaMam,
     team: "teacher",
     socials: [
       { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://www.linkedin.com/in/dr-reshma-rastogi-nee-khemchandani-743716a/' },
