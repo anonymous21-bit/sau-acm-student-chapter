@@ -8,12 +8,12 @@ import KundanSharma from '../assets/images/KundanSharma.jpg';
 import ManvendraSinghBika from '../assets/images/ManvendraSinghBika.jpeg';
 import MisbahUlIslam from '../assets/images/MisbahUlIslam.jpeg';
 import MukulSharma from '../assets/images/MukulSharma.jpg';
-import PrashantSingh from '../assets/images/PrashantSingh.JPG';
+import PrashantSingh from '../assets/images/PrashantSingh.jpg';
 import RajeshChowdhury from '../assets/images/RajeshChowdhury.webp';
 import SakshiWagh from '../assets/images/SakshiWagh.jpg';
 import SaniaShanty from '../assets/images/SaniaShanty.jpg';
 import SuyashSinghGusain from '../assets/images/SuyashSinghGusain.jpg';
-import VAISHALIJAIN from '../assets/images/VAISHALIJAIN.jpg';
+import VaishaliJain from '../assets/images/VaishaliJain.jpg';
 
 
 interface TeamMember {
@@ -209,7 +209,7 @@ const teamMembers: TeamMember[] = [
     role: "Content Creator",
     subRole: "",
     icon: <PenTool className="w-6 h-6 text-black" />,
-    image: VAISHALIJAIN,
+    image: VaishaliJain,
     team: "socialMedia",
     socials: [
       { icon: <Instagram className="h-5 w-5 text-black" />, url: 'https://instagram.com/vaishali' },
