@@ -2,6 +2,19 @@ import React from 'react';
 import { Code, Laptop, Megaphone, Users, Palette, Globe, Github, Linkedin, Instagram, Twitter, BookOpen, BookText, PenTool } from 'lucide-react';
 
 import ReshmaMam from '../assets/images/Reshma_rastoogi.jpeg';
+import BhavanaGupta from '../assets/images/BhavanaGupta.png';
+import BhumiPriya from '../assets/images/BhoomiPriya.jpeg';
+import KundanSharma from '../assets/images/KundanSharma.jpg';
+import ManvendraSinghBika from '../assets/images/ManvendraSinghBika.jpeg';
+import MisbahUlIslam from '../assets/images/MisbahUlIslam.jpeg';
+import MukulSharma from '../assets/images/MukulSharma.jpg';
+import PrashantSingh from '../assets/images/PrashantSingh.JPG';
+import RajeshChowdhury from '../assets/images/RajeshChowdhury.webp';
+import SakshiWagh from '../assets/images/SakshiWagh.jpg';
+import SaniaShanty from '../assets/images/SaniaShanty.jpg';
+import SuyashSinghGusain from '../assets/images/SuyashSinghGusain.jpg';
+import VAISHALIJAIN from '../assets/images/VAISHALIJAIN.jpg';
+
 
 interface TeamMember {
   name: string;
@@ -34,7 +47,7 @@ const teamMembers: TeamMember[] = [
     role: "Chair",
     subRole: "R&D Lead",
     icon: <Code className="w-6 h-6 text-black" />,
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400",
+    image: SakshiWagh,
     team: "coordinators",
     socials: [
       { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/sakshi' },
@@ -46,7 +59,7 @@ const teamMembers: TeamMember[] = [
     role: "Vice Chair",
     subRole: "Tech Lead",
     icon: <Laptop className="w-6 h-6 text-black" />,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400",
+    image: MukulSharma,
     team: "coordinators",
     socials: [
       { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/mukulsharma15' },
@@ -58,7 +71,7 @@ const teamMembers: TeamMember[] = [
     role: "Secretary",
     subRole: "Social Media Lead",
     icon: <Megaphone className="w-6 h-6 text-black" />,
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400",
+    image: BhumiPriya,
     team: "coordinators",
     socials: [
       { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/bhoomi' },
@@ -70,7 +83,7 @@ const teamMembers: TeamMember[] = [
     role: "Treasurer",
     subRole: "Management Lead",
     icon: <Users className="w-6 h-6 text-black" />,
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400",
+    image: ManvendraSinghBika,
     team: "coordinators",
     socials: [
       { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/manvendra' },
@@ -82,7 +95,7 @@ const teamMembers: TeamMember[] = [
     role: "Web Master",
     subRole: "",
     icon: <Palette className="w-6 h-6 text-black" />,
-    image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=400",
+    image: KundanSharma,
     team: "coordinators",
     socials: [
       { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/anonymous21-bit' },
@@ -96,7 +109,7 @@ const teamMembers: TeamMember[] = [
     role: "Tech Lead",
     subRole: "Vice Chair",
     icon: <Laptop className="w-6 h-6 text-black" />,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400",
+    image: MukulSharma,
     team: "tech",
     socials: [
       { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/mukulsharma15' },
@@ -108,7 +121,7 @@ const teamMembers: TeamMember[] = [
     role: "Web Master",
     subRole: "",
     icon: <Code className="w-6 h-6 text-black" />,
-    image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=400",
+    image: KundanSharma,
     team: "tech",
     socials: [
       { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/anonymous21-bit' },
@@ -116,11 +129,11 @@ const teamMembers: TeamMember[] = [
     ]
   },
   {
-    name: "Rajesh",
+    name: "Rajesh Chowdhury",
     role: "Tech Member",
     subRole: "",
     icon: <Laptop className="w-6 h-6 text-black" />,
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400",
+    image: RajeshChowdhury,
     team: "tech",
     socials: [
       { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/rajesh' },
@@ -128,7 +141,7 @@ const teamMembers: TeamMember[] = [
     ]
   },
   {
-    name: "Anmol",
+    name: "Anmol Narayan",
     role: "Tech Member",
     subRole: "",
     icon: <Laptop className="w-6 h-6 text-black" />,
@@ -142,11 +155,11 @@ const teamMembers: TeamMember[] = [
 
   // PR team
   {
-    name: "Prashant",
+    name: "Prashant Singh",
     role: "PR Lead",
     subRole: "",
     icon: <Globe className="w-6 h-6 text-black" />,
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400",
+    image: PrashantSingh,
     team: "pr",
     socials: [
       { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/prashant' },
@@ -154,11 +167,11 @@ const teamMembers: TeamMember[] = [
     ]
   },
   {
-    name: "Bhavna",
+    name: "Bhavna Gupta",
     role: "PR Member",
     subRole: "",
     icon: <Globe className="w-6 h-6 text-black" />,
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400",
+    image: BhavanaGupta,
     team: "pr",
     socials: [
       { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/bhavna' },
@@ -172,7 +185,7 @@ const teamMembers: TeamMember[] = [
     role: "Social Media Lead",
     subRole: "Secretary",
     icon: <Megaphone className="w-6 h-6 text-black" />,
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400",
+    image: BhumiPriya,
     team: "socialMedia",
     socials: [
       { icon: <Instagram className="h-5 w-5 text-black" />, url: 'https://instagram.com/bhoomi' },
@@ -180,11 +193,11 @@ const teamMembers: TeamMember[] = [
     ]
   },
   {
-    name: "Misbah",
+    name: "Misbah Ul Islam",
     role: "Content Creator",
     subRole: "",
     icon: <PenTool className="w-6 h-6 text-black" />,
-    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=400",
+    image: MisbahUlIslam,
     team: "socialMedia",
     socials: [
       { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/misbahGitPilot44?tab=repositories' },
@@ -192,11 +205,11 @@ const teamMembers: TeamMember[] = [
     ]
   },
   {
-    name: "Vaishali",
+    name: "Vaishali Jain",
     role: "Content Creator",
     subRole: "",
     icon: <PenTool className="w-6 h-6 text-black" />,
-    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=400",
+    image: VAISHALIJAIN,
     team: "socialMedia",
     socials: [
       { icon: <Instagram className="h-5 w-5 text-black" />, url: 'https://instagram.com/vaishali' },
@@ -204,11 +217,11 @@ const teamMembers: TeamMember[] = [
     ]
   },
   {
-    name: "Suyash",
+    name: "Suyash Singh Gusain",
     role: "Content Creator",
     subRole: "",
     icon: <PenTool className="w-6 h-6 text-black" />,
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400",
+    image: SuyashSinghGusain,
     team: "socialMedia",
     socials: [
       { icon: <Instagram className="h-5 w-5 text-black" />, url: 'https://instagram.com/suyash' },
@@ -222,7 +235,7 @@ const teamMembers: TeamMember[] = [
     role: "R&D Lead",
     subRole: "Chair",
     icon: <BookOpen className="w-6 h-6 text-black" />,
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400",
+    image: SakshiWagh,
     team: "rnd",
     socials: [
       { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/sakshi' },
@@ -230,11 +243,11 @@ const teamMembers: TeamMember[] = [
     ]
   },
   {
-    name: "Sania",
+    name: "Sania Shanty",
     role: "R&D Member",
     subRole: "",
     icon: <BookOpen className="w-6 h-6 text-black" />,
-    image: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?auto=format&fit=crop&w=400",
+    image: SaniaShanty,
     team: "rnd",
     socials: [
       { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/sania' },
