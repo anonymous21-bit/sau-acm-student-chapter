@@ -14,6 +14,9 @@ import SakshiWagh from '../assets/images/SakshiWagh.jpg';
 import SaniaShanty from '../assets/images/SaniaShanty.jpg';
 import SuyashSinghGusain from '../assets/images/SuyashSinghGusain.jpg';
 import VaishaliJain from '../assets/images/VaishaliJain.jpg';
+import SaumyaParashar from '../assets/images/SaumyaParashar.jpeg';
+import YajatKrishnan from '../assets/images/YajataKrishnan.jpeg';
+import AnmolNarayan from '../assets/images/AnmolNarayan.jpeg';
 
 
 interface TeamMember {
@@ -145,7 +148,7 @@ const teamMembers: TeamMember[] = [
     role: "Tech Member",
     subRole: "",
     icon: <Laptop className="w-6 h-6 text-black" />,
-    image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?auto=format&fit=crop&w=400",
+    image: AnmolNarayan,
     team: "tech",
     socials: [
       { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/anmol' },
@@ -228,6 +231,18 @@ const teamMembers: TeamMember[] = [
       { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/suyash' }
     ]
   },
+  {
+    name: "Saumya Parashar",
+    role: "Content Creator",
+    subRole: "",
+    icon: <Megaphone className="w-6 h-6 text-black" />,
+    image: SaumyaParashar,
+    team: "socialMedia",
+    socials: [
+      { icon: <Instagram className="h-5 w-5 text-black" />, url: 'https://instagram.com/saumya ' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/saumya' }
+    ]
+  },
 
   // R&D Team
   {
@@ -252,6 +267,18 @@ const teamMembers: TeamMember[] = [
     socials: [
       { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/sania' },
       { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/sania' }
+    ]
+  },
+  {
+    name: "Yajat Krishnan",
+    role: "R&D Member",
+    subRole: "",
+    icon: <BookOpen className="w-6 h-6 text-black" />,
+    image: YajatKrishnan,
+    team: "rnd",
+    socials: [
+      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/yajat' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/yajat' }
     ]
   }
 ];
