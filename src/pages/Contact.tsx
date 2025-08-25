@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Facebook, Twitter, Send } from 'lucide-react';
+import { Instagram, Linkedin, Send } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -121,24 +121,24 @@ const Contact: React.FC = () => {
 
         <div className="mt-8 text-center">
           <p className="text-lg mb-4">Or contact us directly:</p>
-          <p className="text-lg mb-8">Email: sau.acm@example.com</p>
+          <p className="text-lg mb-8">Email: acmstudentchapter@sau.int</p>
 
           <div className="flex justify-center space-x-6 mb-8">
             <a
-              href="https://twitter.com/sau_acm"
+              href="https://www.linkedin.com/company/sau-acm-student-chapter"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[var(--accent)] hover:text-[#0D9488]"
             >
-              <Twitter className="w-6 h-6" />
+              <Linkedin className="h-5 w-5 text-black" />
             </a>
             <a
-              href="https://facebook.com/sauacm"
+              href="https://www.instagram.com/sau_acmchapter?igsh=MThkeXliYm1taHkxZQ=="
               target="_blank"
               rel="noopener noreferrer"
               className="text-[var(--accent)] hover:text-[#0D9488]"
             >
-              <Facebook className="w-6 h-6" />
+              <Instagram className="h-5 w-5 text-black" />
             </a>
           </div>
         </div>
