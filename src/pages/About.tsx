@@ -39,8 +39,7 @@ const teamMembers: TeamMember[] = [
     image: ReshmaMam,
     team: "teacher",
     socials: [
-      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://www.linkedin.com/in/dr-reshma-rastogi-nee-khemchandani-743716a/' },
-      { icon: <Twitter className="h-5 w-5 text-black" />, url: 'https://twitter.com/reshmarastogi' }
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://www.linkedin.com/in/dr-reshma-rastogi-nee-khemchandani-743716a/' }
     ]
   },
   
@@ -53,8 +52,8 @@ const teamMembers: TeamMember[] = [
     image: SakshiWagh,
     team: "coordinators",
     socials: [
-      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/sakshi' },
-      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/sakshi' }
+      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/sakshiwagh31' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://www.linkedin.com/in/sakshi-wagh-518932169' }
     ]
   },
   {
@@ -77,8 +76,8 @@ const teamMembers: TeamMember[] = [
     image: BhumiPriya,
     team: "coordinators",
     socials: [
-      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/bhoomi' },
-      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/bhoomi' }
+      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/Bhoomi139' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://http://linkedin.com/in/bhoomi-priya-5397711b6' }
     ]
   },
   {
@@ -165,8 +164,8 @@ const teamMembers: TeamMember[] = [
     image: PrashantSingh,
     team: "pr",
     socials: [
-      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/prashant' },
-      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/prashant' }
+      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/praShaanT11' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://www.linkedin.com/in/prashant-singh-091019166' }
     ]
   },
   {
@@ -177,8 +176,8 @@ const teamMembers: TeamMember[] = [
     image: BhavanaGupta,
     team: "pr",
     socials: [
-      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/bhavna' },
-      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/bhavna' }
+      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/BhavanaGupta1st' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://www.linkedin.com/in/bhavanagupta1st/' }
     ]
   },
 
@@ -191,8 +190,8 @@ const teamMembers: TeamMember[] = [
     image: BhumiPriya,
     team: "socialMedia",
     socials: [
-      { icon: <Instagram className="h-5 w-5 text-black" />, url: 'https://instagram.com/bhoomi' },
-      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/bhoomi' }
+      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/Bhoomi139' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://http://linkedin.com/in/bhoomi-priya-5397711b6' }
     ]
   },
   {
@@ -227,8 +226,8 @@ const teamMembers: TeamMember[] = [
     image: SuyashSinghGusain,
     team: "socialMedia",
     socials: [
-      { icon: <Instagram className="h-5 w-5 text-black" />, url: 'https://instagram.com/suyash' },
-      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/suyash' }
+      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/suyash-codes' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://www.linkedin.com/in/suyashsinghgusain' }
     ]
   },
   {
@@ -239,8 +238,8 @@ const teamMembers: TeamMember[] = [
     image: SaumyaParashar,
     team: "socialMedia",
     socials: [
-      { icon: <Instagram className="h-5 w-5 text-black" />, url: 'https://instagram.com/saumya ' },
-      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/saumya' }
+      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/saumyasau' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://www.linkedin.com/in/saumya-parashar-785120324' }
     ]
   },
 
@@ -253,8 +252,8 @@ const teamMembers: TeamMember[] = [
     image: SakshiWagh,
     team: "rnd",
     socials: [
-      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/sakshi' },
-      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/sakshi' }
+      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/sakshiwagh31' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://www.linkedin.com/in/sakshi-wagh-518932169' }
     ]
   },
   {
@@ -265,8 +264,8 @@ const teamMembers: TeamMember[] = [
     image: SaniaShanty,
     team: "rnd",
     socials: [
-      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/sania' },
-      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/sania' }
+      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/Sania-Shanty' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://www.linkedin.com/in/sania-shanty-83179b355' }
     ]
   },
   {
@@ -277,8 +276,8 @@ const teamMembers: TeamMember[] = [
     image: YajatKrishnan,
     team: "rnd",
     socials: [
-      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/yajat' },
-      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/yajat' }
+      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/Yajat2106?tab=repositories' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://www.linkedin.com/in/yajatkrishnan/' }
     ]
   }
 ];
