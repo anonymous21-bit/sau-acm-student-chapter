@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Laptop, Megaphone, Users, Palette, Globe, Github, Linkedin, Instagram, Twitter, BookOpen, BookText, PenTool } from 'lucide-react';
+import { Code, Laptop, Megaphone, Users, Palette, Globe, Github, Linkedin, Instagram, BookOpen, BookText, PenTool } from 'lucide-react';
 
 import ReshmaMam from '../assets/images/Reshma_rastoogi.jpeg';
 import BhavanaGupta from '../assets/images/BhavanaGupta.png';
@@ -150,8 +150,8 @@ const teamMembers: TeamMember[] = [
     image: AnmolNarayan,
     team: "tech",
     socials: [
-      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/anmol' },
-      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://linkedin.com/in/anmol' }
+      { icon: <Github className="h-5 w-5 text-black" />, url: 'https://github.com/AN2100' },
+      { icon: <Linkedin className="h-5 w-5 text-black" />, url: 'https://www.linkedin.com/in/anmol-narayan-770245216' }
     ]
   },
 
